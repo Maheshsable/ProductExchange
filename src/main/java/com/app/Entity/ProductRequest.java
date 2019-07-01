@@ -23,10 +23,10 @@ public class ProductRequest {
     @Column(name="prId",length=10)
 	private int prId;
     @Column(name="excPId",length=10)
-	private Product excPId;
+	private Integer excPId;
     @Column(name="reqPID",length=10)
-	private Product reqPID;
-    @Column(name="reqPID",length=10)
+	private Integer reqPID;
+    @Column(name="dateOfRequest",length=10)
 	private Date dateOfRequest;
     @Column(name="dateOfApproval",length=10)
 	private Date dateOfApproval;
@@ -39,16 +39,17 @@ public class ProductRequest {
 	public void setPrId(int prId) {
 		this.prId = prId;
 	}
-	public Product getExcPId() {
+	
+	public Integer getExcPId() {
 		return excPId;
 	}
-	public void setExcPId(Product excPId) {
+	public void setExcPId(Integer excPId) {
 		this.excPId = excPId;
 	}
-	public Product getReqPID() {
+	public Integer getReqPID() {
 		return reqPID;
 	}
-	public void setReqPID(Product reqPID) {
+	public void setReqPID(Integer reqPID) {
 		this.reqPID = reqPID;
 	}
 	public Date getDateOfRequest() {

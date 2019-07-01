@@ -7,6 +7,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -21,7 +22,7 @@ public class State {
 	 @Column(name="sname",length=10)
 	 private String sName;
 	 @ManyToOne(targetEntity=Country.class,cascade=CascadeType.ALL,fetch=FetchType.EAGER)
-	 @Column(name="cid",length=10)
+	 @JoinColumn(name="cid")
 	 private Country cId;
 	 
 	public int getsId() {
